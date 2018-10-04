@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+/**
+ * @file This file is a simply shell wrapper for running DMT Robo commands.
+ *
+ * Having a wrapper permits other non-shell files to directly require
+ * dmt-robo.php.
+ */
+
+// Shell wrapper for DMT.
+require_once __DIR__ . '/dmt-robo.php';

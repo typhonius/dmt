@@ -1,0 +1,31 @@
+{
+    "name": "typhonius/dmt",
+    "description": "Drupal Module Tracker (DMT): A mechanism for detecting modules on Drupal sites and displaying them on a dashboard.",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0",
+        "consolidation/robo": "^1.2",
+        "symfony/lock": "^3|^4"
+    },
+    "bin": ["bin/dmt"],
+    "autoload": {
+        "psr-4": {
+            "DrupalModuleTracker\\": "src/"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.1"
+    },
+    "scripts": {
+        "lint": "php -l ./src/",
+        "sniff": "./vendor/bin/phpcs -s --standard=PSR2 ./src/"
+    },
+    "authors": [
+        {
+            "name": "Adam Malone",
+            "email": "adam@adammalone.net",
+            "homepage": "https://www.adammalone.net",
+            "role": "Developer"
+        }
+    ]
+}

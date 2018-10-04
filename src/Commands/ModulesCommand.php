@@ -123,7 +123,7 @@ VALUES(:site, :machine_name, :display_name, :status, :version)'
                     'CREATE TABLE IF NOT EXISTS `modules` (
   `site` varchar(60) NOT NULL DEFAULT "",
   `machine_name` varchar(60) NOT NULL DEFAULT "",
-  `display_name` varchar(60) NOT NULL DEFAULT "",
+  `display_name` varchar(100) NOT NULL DEFAULT "",
   `status` int(1) NOT NULL,
   `version` varchar(16) DEFAULT ""
 )'
@@ -136,7 +136,7 @@ VALUES(:site, :machine_name, :display_name, :status, :version)'
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `site` varchar(60) NOT NULL DEFAULT "",
   `machine_name` varchar(60) NOT NULL DEFAULT "",
-  `display_name` varchar(60) NOT NULL DEFAULT "",
+  `display_name` varchar(100) NOT NULL DEFAULT "",
   `status` int(1) NOT NULL,
   `version` varchar(16) DEFAULT "",
   PRIMARY KEY (`id`)

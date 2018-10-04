@@ -44,7 +44,7 @@ class ModulesCommand extends Tasks
                 );
                 break;
             default:
-                throw new Exception('Incorrect driver');
+                throw new \Exception('Incorrect driver');
             break;
         }
         $this->database->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);

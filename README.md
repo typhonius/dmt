@@ -21,8 +21,7 @@ Drush aliases can then be added to the config file for use.
 
 Basic commands create the tables and download modules to the database.
 
-```php
-
+```bash
 // Create the database table required for the tool.
 ./bin/dmt modules:createtable
 

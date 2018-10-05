@@ -4,7 +4,9 @@ use Consolidation\Config\Loader\YamlConfigLoader;
 
 function dmt_render()
 {
-    header("Cache-Control: max-age=86400");
+    header("Cache-Control: no-cache, must-revalidate private");
+    header("Pragma: no-cache");
+    header("Expires: Sun, 19 Nov 1978 05:00:00 GMT");
     $header = dmt_header();
     $rows = dmt_rows();
     return '<table>' . $header . '<tbody>' . $rows . '</tbody></table>';

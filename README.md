@@ -39,3 +39,5 @@ Apache can be configured to point to the `app` directory. Alternatively, for sli
 php -S 127.0.0.1:8080 -t app/
 
 ```
+
+It is recommended for privacy and security that this dashboard be protected with at the least, an .htaccess specifying basic authentication username and password.

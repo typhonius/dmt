@@ -5,6 +5,7 @@ namespace DrupalModuleTracker\Commands;
 use Robo\Tasks;
 use Robo\Robo;
 use Symfony\Component\Process\Process;
+use Symfony\Component\Process\ExecutableFinder;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
 /**
@@ -58,9 +59,11 @@ class ModulesCommand extends Tasks
     public function modulesTracker()
     {
         $this->clearTable();
+        $finder = new ExecutableFinder();
+        $executable = $finder->find('drush', null, []);
         foreach ($this->sites as $site) {
             $this->say("Working on ${site}");
-            $process = new Process(array('drush', "@${site}", 'pml', '--format=json'));
+            $process = new Process(array($executable, "@${site}", 'pml', '--format=json'));
             $process->run();
             if (!$process->isSuccessful()) {
                 throw new ProcessFailedException($process);
